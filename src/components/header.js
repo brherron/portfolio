@@ -1,42 +1,45 @@
+import React, { useState } from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { slide as Menu } from 'react-burger-menu'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import useDocumentScrollThrottled from '../aux/useDocumentScrollThrottled'
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+function Header() {
+  const [shouldHaveBackground, setShouldHaveBackground] = useState(false);
+  
+  const MINIMUM_SCROLL = 10;
 
-Header.defaultProps = {
-  siteTitle: ``,
+  useDocumentScrollThrottled(callbackData => {
+    const { currentScrollTop } = callbackData;
+    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+
+    setTimeout(() => {
+      setShouldHaveBackground(isMinimumScrolled);
+    }, 0);
+  });
+
+  const headerStyle = shouldHaveBackground ? 'has-background' : '';
+  
+  return (
+    <header>
+      <div className="container">
+        <div className={`inner-header ${headerStyle}`}>
+          <div className="logo">
+            <Link to="/">BHD.</Link>
+          </div>
+          <div className="navigation">
+            <nav>
+              <AniLink cover direction="left" to="/home" duration={0.8} bg="black">Home</AniLink>
+              <AniLink cover direction="up" to="/projects" duration={0.8} bg="black">Projects</AniLink>
+              <AniLink cover direction="right" to="/page-2" duration={0.8} bg="black">About</AniLink>
+              <AniLink cover direction="down" to="/contact" duration={0.8} bg="black">Contact</AniLink>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Header

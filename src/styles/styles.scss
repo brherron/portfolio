@@ -1,0 +1,192 @@
+//Fonts
+$font: 'proxima-nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+
+//Animations
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+//Colors
+
+html {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: inherit;    /* Firefox, other Gecko */
+  box-sizing: inherit;
+}
+
+html, body {
+  font-family: $font;
+  font-size: 20px;
+  margin: 0;
+  background-color: transparent;
+}
+
+.container {
+  width: 100%;
+  padding: 0.5rem;
+  opacity: 0;
+  position: absolute;
+  @include animation('on 0.8s ease-in-out 0s forwards');
+}
+
+//Header
+header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+
+  .inner-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    background-color: transparent;
+    padding: 0 1.5rem;
+    border: 1px solid transparent;
+    transition: 0.3s;
+
+    .logo {
+      a {
+        font-family: 'aktiv-grotesk';
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 9px;
+        color: black;
+      }
+    }
+    .navigation {
+      nav {
+        a {
+          margin: 0 20px;
+          text-decoration: none;
+          font-size: 0.65rem;
+          letter-spacing: 1.75px;
+          color: black;
+          opacity: 0.6;
+          transition: 0.3s;
+        }
+        a:hover {
+          opacity: 1;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.has-background {
+  background-color: rgba($color: white, $alpha: 0.6) !important;
+  border: 1px solid #00000010 !important;
+  transition: 0.3s;
+}
+
+
+
+//Hero Section
+.hero {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  height: 100vh;
+
+  .row {
+    position: relative;
+    background-color: white;
+
+    .main-text {
+      font-size: 4.5rem;
+      text-transform: uppercase;
+      letter-spacing: 42px;
+      font-weight: 700;
+      color: white;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      mix-blend-mode: difference;
+      z-index: 99;
+      @media(max-width: 1440px) {
+        font-size: 2.5rem;
+        letter-spacing: 36px;
+      }
+    }
+    .main-image {
+      width: 530px;
+      margin: 0 auto;
+      @media (max-width: 1440px) {
+        width: 436px;
+      }
+    }
+    .side-image {
+      width: 260px;
+      position: absolute;
+      @media (max-width: 1440px) {
+        width: 208px;
+      }
+      &.left {
+        left: 168px;
+        top: 36px;
+        @media(max-width: 1440px) {
+          left: 128px;
+        }
+      }
+      &.right {
+        right: 168px;
+        bottom: 12px;
+        @media(max-width: 1440px) {
+          right: 128px;
+        }
+      }
+    }
+  }
+}
+
+@include keyframes (on) {
+  100% {
+    opacity: 1;
+  }
+}
