@@ -116,7 +116,7 @@ header {
 }
 
 .has-background {
-  background-color: rgba($color: white, $alpha: 0.6) !important;
+  background-color: rgba($color: white, $alpha: 0.8) !important;
   border: 1px solid #00000010 !important;
   transition: 0.3s;
 }
@@ -129,58 +129,65 @@ header {
   align-items: center;
   background-color: white;
   position: relative;
-  height: 100vh;
+  height: 120vh;
 
   .row {
     position: relative;
     background-color: white;
 
-    .main-text {
-      font-size: 4.5rem;
-      text-transform: uppercase;
-      letter-spacing: 42px;
-      font-weight: 700;
-      color: white;
+    .hero-text {
+      font-size: 7.8vh;
+      font-weight: 600;
+      letter-spacing: -4px;
+      line-height: 100%;
+      color: black;
       position: absolute;
-      width: 100%;
-      left: 0;
-      top: 50%;
+      width: 35vw;
+      left: 8%;
       transform: translateY(-50%);
-      text-align: center;
-      mix-blend-mode: difference;
+      text-align: left;
       z-index: 99;
-      @media(max-width: 1440px) {
-        font-size: 2.5rem;
-        letter-spacing: 36px;
+      & p {
+        font-size: 2.7vh;
+        letter-spacing: 0;
+        font-weight: 300;
+        line-height: 130%;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
       }
-    }
-    .main-image {
-      width: 530px;
-      margin: 0 auto;
-      @media (max-width: 1440px) {
-        width: 436px;
+      & a {
+        text-decoration: none;
+        font-size: 1rem;
+        letter-spacing: 0;
+        font-weight: 500;
+        color: white;
+        padding: 1rem 2.5rem 1rem 2.5rem;
+        background-color: black;
+        transition: 0.3s;
+        &:hover {
+          opacity: 0.5;
+          transition: 0.3s;
+          padding: 1rem 2.5rem 1rem 2.5rem;
+          box-shadow: -3px 3px 5px grey;
+        }
       }
+
     }
-    .side-image {
-      width: 260px;
+    .hero-image {
       position: absolute;
-      @media (max-width: 1440px) {
-        width: 208px;
-      }
-      &.left {
-        left: 168px;
-        top: 36px;
-        @media(max-width: 1440px) {
-          left: 128px;
-        }
-      }
-      &.right {
-        right: 168px;
-        bottom: 12px;
-        @media(max-width: 1440px) {
-          right: 128px;
-        }
-      }
+      width: 83vw;
+      left: 33vw;
+      transform: translateY(-45%);
+      background-image: linear-gradient(to right, #c3c3c3, #cacaca, #d0d0d0, #d7d7d7, #dedede, #e3e3e3, #e8e8e8, #ededed, #f1f1f1, #f6f6f6, #fafafa, #ffffff);;
+      margin: 0 auto;
+      height: 90vh;
+      z-index: 9;
+    }
+    .hl-project {
+      margin: 0 auto;
+      padding: 5% 6% 3% 0;
+      width: 51%;
+      z-index: 10;
     }
   }
 }

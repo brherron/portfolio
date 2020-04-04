@@ -11,9 +11,9 @@ function splashAnimation() {
           steps={[
             'Beau Herron Dev', 20, 
             'Beau Herron Dev', 1200, 
-            'Beau Herron Developer', 300,
-            'Beau Herron Designer', 300,
-            'Beau Herron Creator', 400
+            'Beau Herron Developer.', 300,
+            'Beau Herron Designer.', 300,
+            'Beau Herron Creator.', 400
           ]}
           wrapper="p"
         />

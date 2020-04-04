@@ -1,27 +1,14 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Img from 'gatsby-image';
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
-      blueShades: file(relativePath: { eq: "blue.jpg" }) {
+      hl_project: file(relativePath: { eq: "hl_project.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      redEarrings: file(relativePath: { eq: "red.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      yellowFence: file(relativePath: { eq: "yellow.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -33,17 +20,16 @@ const Hero = () => {
     <div className="hero">
       <div className="container">
         <div className="row">
-          <div className="side-image left">
-            <Img fluid={data.redEarrings.childImageSharp.fluid} />
+          <div className="hero-text">
+            Minimal design,
+            simple experience.
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <AniLink className="hero-button" cover direction="up" to="/projects" duration={0.8} bg="black">Browse Projects</AniLink>
           </div>
-          <div className="main-text">
-            Oladimeji Odunsi
-          </div>
-          <div className="main-image">
-            <Img fluid={data.blueShades.childImageSharp.fluid} />
-          </div>
-          <div className="side-image right">
-            <Img fluid={data.yellowFence.childImageSharp.fluid} />
+          <div className="hero-image">
+            <div className="hl-project">
+              <Img fluid={data.hl_project.childImageSharp.fluid} />
+            </div>
           </div>
         </div>
       </div>
