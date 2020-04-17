@@ -4,6 +4,7 @@ import '../styles/styles.scss'
 //Import Components
 import Header from '../components/header.js'
 import Hero from '../components/hero.js'
+import Services from '../components/services.js'
 
 class Home extends Component {
   render() {
@@ -11,6 +12,7 @@ class Home extends Component {
       <div>
         <Header />
         <Hero />
+        <Services />
         <Hero />
       </div>
     )

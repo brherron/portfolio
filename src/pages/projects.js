@@ -5,7 +5,7 @@ import '../styles/styles.scss'
 import Header from '../components/header.js'
 import Hero from '../components/hero.js'
 
-class SecondPage extends Component {
+class Projects extends Component {
   render() {
     return (
       <div>
@@ -16,4 +16,4 @@ class SecondPage extends Component {
   }
 } 
 
-export default SecondPage
+export default Projects

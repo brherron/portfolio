@@ -26,7 +26,7 @@ function Header() {
       <div className="container">
         <div className={`inner-header ${headerStyle}`}>
           <div className="logo">
-            <Link to="/">BHD.</Link>
+            <Link to="/home">BHD.</Link>
           </div>
           <div className="navigation">
             <nav>
