@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { slide as Menu } from 'react-burger-menu'
 
 import useDocumentScrollThrottled from '../aux/useDocumentScrollThrottled'
 
@@ -26,14 +25,14 @@ function Header() {
       <div className="container">
         <div className={`inner-header ${headerStyle}`}>
           <div className="logo">
-            <Link to="/home">BHD.</Link>
+            <Link to="/">BHD.</Link>
           </div>
           <div className="navigation">
             <nav>
-              <AniLink cover direction="left" to="/home" duration={0.8} bg="black">Home</AniLink>
-              <AniLink cover direction="up" to="/projects" duration={0.8} bg="black">Projects</AniLink>
-              <AniLink cover direction="right" to="/page-2" duration={0.8} bg="black">About</AniLink>
-              <AniLink cover direction="down" to="/contact" duration={0.8} bg="black">Contact</AniLink>
+              <AniLink cover direction="left" to="/" duration={0.8} bg="black">Home</AniLink>
+              <AniLink cover direction="up" to="/" duration={0.8} bg="black">Projects</AniLink>
+              <AniLink cover direction="right" to="/" duration={0.8} bg="black">About</AniLink>
+              <AniLink cover direction="down" to="/" duration={0.8} bg="black">Contact</AniLink>
             </nav>
           </div>
         </div>

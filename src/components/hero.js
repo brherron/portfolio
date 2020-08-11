@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Img from 'gatsby-image';
+import { useScroll } from '../aux/useScroll.js'
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -16,6 +17,8 @@ const Hero = () => {
     }
   `)
 
+  const { scrollX, scrollY, scrollDirection } = useScroll();
+
   return (
     <div className="hero">
       <div className="container">
@@ -27,7 +30,7 @@ const Hero = () => {
             <AniLink className="hero-button" cover direction="up" to="/projects" duration={0.8} bg="black">Browse Projects</AniLink>
           </div>
           <div className="hero-image">
-            <div className="hl-project">
+            <div className="hl-project" style={{width: '5'+scrollY/150+'%'}}>
               <Img fluid={data.hl_project.childImageSharp.fluid} />
             </div>
           </div>

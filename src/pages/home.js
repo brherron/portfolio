@@ -13,7 +13,6 @@ class Home extends Component {
         <Header />
         <Hero />
         <Services />
-        <Hero />
       </div>
     )
   }
