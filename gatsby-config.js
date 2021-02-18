@@ -9,7 +9,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['proxima-nova', 'permanent-marker'],
+          families: ['proxima-nova', 'permanent-marker', 'aktiv-grotesk'],
           urls: ['https://use.typekit.net/dok2zlr.css']
         }
       }
@@ -33,7 +33,7 @@ module.exports = {
         background_color: `#000000`,
         theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-sass`,

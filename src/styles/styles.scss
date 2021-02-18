@@ -42,6 +42,8 @@ $font: 'proxima-nova', 'permanent-marker', -apple-system, BlinkMacSystemFont, 'O
 
 //Colors
 
+@import "~bulma/bulma.sass";
+
 html {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -60,19 +62,29 @@ html, body {
   background-color: transparent;
 }
 
-.container {
-  width: 100%;
-  padding: 0.5rem;
-  opacity: 0;
-  position: absolute;
-  @include animation('on 0.8s ease-in-out 0s forwards');
+.section {
+  padding: 5rem 1.5rem;
+
+  .is-long {
+    padding-bottom: 14rem;
+  }
+}
+
+.title {
+  font-family: 'aktiv-grotesk';
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
 }
 
 //Header
 header {
   height: 80px;
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: 100;
 
   .inner-header {
@@ -81,9 +93,11 @@ header {
     justify-content: space-between;
     height: 65px;
     background-color: transparent;
-    padding: 2.5rem 8rem;
+    padding: 0 2rem;
     border: 1px solid transparent;
     transition: 0.3s;
+    margin: 1.5rem auto;
+    max-width: 1344px;
 
     .logo {
       a {
@@ -120,25 +134,19 @@ header {
   }
 }
 
-.has-background {
-  background-color: rgba($color: white, $alpha: 0.8) !important;
-  border: 1px solid #00000010 !important;
-  transition: 0.3s;
-}
-
 
 // ------------- HOME ------------ //
 //Hero Section
-.hero {
+.hero-test {
   display: flex;
   align-items: center;
   position: relative;
+  padding-top: 10rem;
   height: 100vh;
 
   .row {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     align-items: center;
 
     .title {
@@ -146,29 +154,26 @@ header {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin-top: 9rem;
-      margin-bottom: 0;
+      margin-bottom: 2rem;
       font-family: 'permanent-marker';
       font-size: 1.45rem;
 
       .title-letter {
         padding: 0 0.18rem;
         cursor: default;
-        // text-shadow: 2px 2px #ff0000;
       }
     }
 
     .subtitle {
       font-family: 'proxima-nova';
       font-weight: 300;
-      color: #6e6e6e;
+      color: #515151;
       font-size: 1rem;
       margin-bottom: 3rem;
     }
 
     .hero-image-container {
       display: flex;
-      // background-color: lightblue;
       height: 70vh;
       width: 90vw;
       justify-content: center;
@@ -183,21 +188,92 @@ header {
   }
 }
 
-//Services Section
-.services {
+//About Section
+.about {
   display: flex;
-  align-items: center;
+  justify-content: center;
   background-color: black;
   position: relative;
-  height: 80vh;
 
-  .row {
-    position: relative;
-    background-color: white;
-    content: "";
-    
+  .container {
+    max-width: 1344px;
+  }
+
+  .section-title {
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: white;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
+    font-weight: 300;
+    line-height: 1.4rem;
+    color: white;
   }
 }
+
+//Skills Section
+.section.skills {
+  margin-top: -14rem;
+  padding-bottom: 1rem;
+
+  .container.is-narrow {
+    max-width: 1200px;
+
+    .box {
+      padding: 0;
+  
+      .content {
+        .columns {
+          margin-left: 0;
+          margin-right: 0;
+
+          .column {
+            padding: 50px 30px;
+            border-bottom: 1px solid #E6ECF8;
+            border-right: 0px solid #E6ECF8;
+
+            figure.image {
+              .is-skill-icon {
+                width: 50px;
+                height: auto;
+              }
+            }
+
+            p {
+              font-size: 18px;
+            }
+
+            p.list-title {
+              margin-top: 50px;
+              margin-bottom: 8px;
+              color: #21C2FC;
+            }
+
+            ul {
+              list-style: none;
+              margin-left: 0;
+              margin-top: 0;
+              font-weight: 300;
+
+              li {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
 
 @include keyframes (on) {
   100% {
@@ -247,4 +323,37 @@ header {
   left: -400px;
   background: linear-gradient(217deg, rgba(255,255,255,0), rgba(255,255,255,0) 35%, rgba(255,255,255,0.25) 45%, rgba(255,255,255,.25) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
   transform: translateX(var(--sheenX)) translateY(var(--sheenY));
+}
+
+
+
+
+
+@media screen and (min-width: 769px) {
+  .section.is-long {
+    padding-bottom: 16rem;
+  }
+
+  .section.skills .container.is-narrow  .box .content .columns .column {
+    border-bottom: 0px solid #E6ECF8;
+    border-right: 1px solid #E6ECF8;
+    padding: 60px 35px;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .section.is-long {
+    padding-bottom: 18rem;
+  }
+
+  .section.skills .container.is-narrow .box .content .columns .column {
+    padding: 70px 55px;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .columns:not(.is-desktop) {
+    display: -webkit-box;
+    display: flex;
+  }
 }

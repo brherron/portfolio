@@ -1,29 +1,13 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import useDocumentScrollThrottled from '../aux/useDocumentScrollThrottled'
-
 function Header() {
-  const [shouldHaveBackground, setShouldHaveBackground] = useState(false);
-  
-  const MINIMUM_SCROLL = 10;
-
-  useDocumentScrollThrottled(callbackData => {
-    const { currentScrollTop } = callbackData;
-    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
-
-    setTimeout(() => {
-      setShouldHaveBackground(isMinimumScrolled);
-    }, 0);
-  });
-
-  const headerStyle = shouldHaveBackground ? 'has-background' : '';
   
   return (
     <header>
       <div className="container">
-        <div className={`inner-header ${headerStyle}`}>
+        <div className='inner-header'>
           <div className="logo">
             <Link to="/">BHD.</Link>
           </div>
