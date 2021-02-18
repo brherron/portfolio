@@ -9,7 +9,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['proxima-nova'],
+          families: ['proxima-nova', 'permanent-marker'],
           urls: ['https://use.typekit.net/dok2zlr.css']
         }
       }

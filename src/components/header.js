@@ -29,9 +29,6 @@ function Header() {
           </div>
           <div className="navigation">
             <nav>
-              <AniLink cover direction="left" to="/" duration={0.8} bg="black">Home</AniLink>
-              <AniLink cover direction="up" to="/" duration={0.8} bg="black">Projects</AniLink>
-              <AniLink cover direction="right" to="/" duration={0.8} bg="black">About</AniLink>
               <AniLink cover direction="down" to="/" duration={0.8} bg="black">Contact</AniLink>
             </nav>
           </div>
