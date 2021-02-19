@@ -58,6 +58,7 @@ const Skills = () => {
                 <p className="list-title has-text-weight-bold">Tools:</p>
                 <ul>
                   <li>MySQL</li>
+                  <li>Twilio</li>
                   <li>DataGrip</li>
                   <li>AWS Infrastructure</li>
                   <li>Premiere Pro</li>

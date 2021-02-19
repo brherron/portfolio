@@ -8,7 +8,7 @@ const Letter = styled(animated.div)`
 const TitleLetter = (props) => {
 
   const [state, toggle] = useState(true)
-  const { x } = useSpring({ from: { x: 1 }, x: state ? 1 : 1.4, config: { tension: 300, mass: 3, friction: 10 } })
+  const { x } = useSpring({ from: { x: 1 }, x: state ? 1 : 1.4, config: { tension: 300, mass: 3, friction: 5 } })
 
  return (
     <Letter className="title-letter"
