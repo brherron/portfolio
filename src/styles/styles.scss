@@ -80,6 +80,16 @@ html, body {
   font-size: 1rem;
 }
 
+a, .button {
+  transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+  font-weight: 400;
+}
+
+.button.is-outlined {
+  border-width: 2px;
+}
+
 //Header
 header {
   height: 80px;
@@ -274,7 +284,116 @@ header {
 
 .section.projects {
   border-bottom: 1px #d2d2d2 solid;
+
+  .container.is-narrow {
+    max-width: 1200px;
+  }
+
+  .container {
+    .project-grid {
+
+      .columns .column figure {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+
+        img.project-thumb {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-transition: .25s ease-in-out;
+          transition: .25s ease-in-out;
+          border-radius: 12px;
+          overflow: hidden;
+        }
+
+        img.project-logo {
+          max-height: 50%;
+          max-width: 55%;
+          margin: auto;
+          z-index: 3;
+          transition: 0.25s;
+        }
+      }
+    }
+
+    .overlay {
+      background-color: #000000d3;
+      border-radius: 12px;
+      opacity: 1;
+      transition: 0.25s;
+    }
+  }
 }
+
+.projects .project-grid .overlay, 
+.projects .project-grid figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.projects .project-grid {
+  padding: 2rem 0 4rem;
+
+  figure figcaption {
+    padding: 0 1rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 1;
+
+    h3.subtitle {
+      color: #fff;
+      font-family: 'aktiv-grotesk';
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-align: right;
+      margin: 0.9rem 0 0 auto;
+      transition: 0.25s;
+    }
+
+    p {
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 300;
+      text-align: right;
+      transition: 0.25s;
+    }
+
+    a {
+      margin: auto auto 2rem auto;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      color: white;
+      opacity: 1;
+      transition: 0.25s;
+      padding: 0.5rem 1.2rem;
+      border: 2px solid white;
+      border-radius: 25px;
+
+      &:hover {
+        opacity: 1;
+        background-color: white;
+        color: rgb(40, 40, 40);
+        transition: 0.25s;
+        bottom: 10%;
+      }
+    }
+  }
+}
+
 
 
 
@@ -344,6 +463,14 @@ header {
     border-bottom: 0px solid #E6ECF8;
     border-right: 1px solid #E6ECF8;
     padding: 60px 35px;
+  }
+
+  .projects .project-grid {
+    padding-top: 4rem;
+
+    figure figcaption {
+      padding: 0rem 1rem;
+    }
   }
 }
 
