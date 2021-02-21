@@ -1,24 +1,21 @@
 import React from "react"
-import { Link } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import SiteLogo from '../images/main-logo.svg'
 
 function Header() {
   
   return (
-    <header>
+    <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="container">
-        <div className='inner-header'>
-          <div className="logo">
-            <Link to="/">BHD.</Link>
-          </div>
-          <div className="navigation">
-            <nav>
-              <AniLink cover direction="down" to="/" duration={0.8} bg="black">Contact</AniLink>
-            </nav>
-          </div>
+        <div className="navbar-brand">
+          <a className="navbar-item" href="/">
+            <img src={SiteLogo} alt="Beau Herron | Designer, Developer, and Musician" height="65" />
+          </a>
+        </div>
+        <div className="contact-button">
+          <a href="/contact" className="button is-black is-outlined is-rounded">Contact</a>
         </div>
       </div>
-    </header>
+    </nav>
   );
 }
 
