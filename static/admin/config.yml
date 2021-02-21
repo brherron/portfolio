@@ -1,0 +1,21 @@
+backend:
+  name: github                  # Link the CMS with a Git repo via Netlify
+  repo: brherron/portfolio
+  branch: master                # Branch to update (optional; defaults to master)
+
+media_folder: static/images     # Store uploaded images in this folder
+public_folder: /images          # Where to find the images in the live site
+
+collections:
+  - name: "projects"            # Used in routes, e.g. admin/collections/work
+    label: "Project"            # Used in the CMS UI
+    folder: "src/projects"      # Where the files will be stored
+    create: true                # Users can create new posts
+    slug: "{{slug}}"            # Creates a safe slug from the post's title, which will be used for the post's filename
+    fields:                     # The fields for each document
+      - {label: "Project Name", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Thumbnail", name: "image", widget: "image"}
+      - {label: "Logo SVG", name: "logo", widget: "image"}
+      - {label: "Button Text", name: "buttonString", widget: "select", options: ["View on Dribbble", "Visit Website"], default: ["Visit Website"]}
+      - {label: "URL", name: "link", widget: "string"}
