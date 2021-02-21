@@ -168,50 +168,49 @@ a, .button {
 
 // ------------- HOME ------------ //
 //Hero Section
-.hero-test {
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding-top: 5rem;
-  // height: 100vh;
+.hero {
+  padding-bottom: 0;
 
-  .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .hero-body {
+    padding-top: 0;
 
-    .title {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 2rem;
-      font-family: 'permanent-marker';
-      font-size: 2rem;
+    .container {
 
-      .title-letter {
-        padding: 0 0.18rem;
-        cursor: default;
+      .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        font-family: 'permanent-marker';
+        font-size: 2rem;
+
+        .title-letter {
+          padding: 0 0.18rem;
+          cursor: default;
+        }
+      }
+
+      .subtitle {
+        font-family: 'proxima-nova';
+        font-weight: 300;
+        color: #515151;
+        font-size: 1.2rem;
+        margin-bottom: auto;
       }
     }
+  }
 
-    .subtitle {
-      font-family: 'proxima-nova';
-      font-weight: 300;
-      color: #515151;
-      font-size: 1.2rem;
-      margin-bottom: auto;
-    }
+  .hero-foot .is-bottom {
 
     .hero-image-container {
       display: flex;
       height: 70vh;
-      width: 90vw;
+      width: auto;
       justify-content: center;
       align-items: center;
 
       .hero-image {
-        transform: scale(0.9);
         position: absolute;
         box-shadow: #00000010;
       }
@@ -462,8 +461,52 @@ a, .button {
 
 
 @media screen and (min-width: 319px) {
+  .navbar-item img {
+    height: 20px;
+    padding-left: 1rem;
+  }
+
+  .contact-button {
+    padding-right: 0.25rem;
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    padding: 1rem 1.5rem;
+  }
+
+  .hero .hero-body {
+    padding: 0;
+  }
+
+  .hero .hero-body .container .columns .column .columns .column {
+    padding-bottom: 0;
+  }
+
   .section-subtitle {
     margin-bottom: 10rem;
+  }
+
+  .hero .hero-body .container .title {
+    white-space: normal;
+    font-size: 1.7rem;
+  }
+
+  .hero .hero-body .container .subtitle {
+    padding-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .hero .hero-foot .is-bottom .hero-image-container {
+    height: 50vh;
+  }
+
+  .hero-image {
+    width: 150px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 
   .tech-grid {
@@ -478,12 +521,51 @@ a, .button {
 
 
 @media screen and (min-width: 769px) {
+  .navbar-item img {
+    height: auto;
+    padding-left: 0rem;
+  }
+
+  .contact-button {
+    padding-right: 0rem;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 5rem 1.5rem;
+  }
+
+  .hero .hero-body .container .title {
+    font-size: 2rem;
+  }
+
+  .hero .hero-body .container .subtitle {
+    padding-top: 0rem;
+    font-size: 1.2rem;
+  }
+
   .section.is-long {
     padding-bottom: 16rem;
   }
 
+  .hero .hero-body .container .columns .column .columns .column {
+    padding: 0.75rem;
+  }
+
   .section-subtitle {
-    margin-bottom: 0  rem;
+    margin-bottom: 0;
+  }
+
+  .hero .hero-foot .is-bottom .hero-image-container {
+    height: 70vh;
+  }
+
+  .hero-image {
+    width: auto;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
   }
 
   .section.skills .container.is-narrow  .box .content .columns .column {

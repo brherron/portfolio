@@ -13,7 +13,7 @@ const ProjectCard = (props) => {
       <figcaption style={{opacity: state ? '0' : '1'}}>
         <h3 className="subtitle">{data.project}</h3>
         <p>{data.subtitle}</p>
-        <a href={data.link} target="_blank" rel="noreferrer">
+        <a href={data.link} target="_blank" rel="noreferrer" style={{ visibility: state ? 'hidden' : 'visible' }}>
           <span>{data.buttonString}</span>
         </a>
       </figcaption>
