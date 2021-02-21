@@ -1,52 +1,13 @@
 import React from 'react'
 
 import ProjectCard from './projectCard'
-import CoffeePNG from '../images/coffee.png'
-import CoffeeSVG from '../images/coffee-logo.svg'
-import TJSVG from '../images/tjmorrow-logo.svg'
-import MMSVG from '../images/murraymac-logo.svg'
 
-const projects = [
-  {
-    project: "Drip Coffee",
-    imageURL: CoffeePNG,
-    subtitle: "Design / Adobe XD",
-    logoURL: CoffeeSVG,
-    buttonString: "View on Dribbble",
-    link: 'https://dribbble.com/shots/14389001-Landing-Page-Coffee-Service'
-  },
-  {
-    project: "Tj Morrow Music",
-    imageURL: CoffeePNG,
-    subtitle: "React Website",
-    logoURL: TJSVG,
-    buttonString: "Visit Website",
-    link: 'https://www.tjmorrowmusic.com'
-  },
-  {
-    project: "MurrayMac Records",
-    imageURL: CoffeePNG,
-    subtitle: "HTML/CSS Website",
-    logoURL: MMSVG,
-    buttonString: "Visit Website",
-    link: 'https://www.murraymacrecords.com'
-  },
-  {
-    project: "MurrayMac Records",
-    imageURL: CoffeePNG,
-    subtitle: "HTML/CSS Website",
-    logoURL: MMSVG,
-    buttonString: "Visit Website",
-    link: 'https://www.murraymacrecords.com'
-  }
-]
+const Projects = (data) => {
 
-
-const Projects = () => {
-  const projectGrid = projects.map((project) => {
+  const projectGrid = data.projects.map((project) => {
 
     return <div className="column is-12-mobile is-half-tablet is-one-third-desktop">
-             <ProjectCard values={project}/>
+             <ProjectCard values={project.node.frontmatter}/>
            </div>
   });
 
@@ -62,7 +23,7 @@ const Projects = () => {
         </div>
         <div className="columns is-centered">
           <div className="column">
-            <a href="https://dribbble.com/beauherron_dev" target="_blank" className="button is-yellow is-outlined is-rounded is-medium">
+            <a href="https://dribbble.com/beauherron_dev" target="_blank" rel="noreferrer" className="button is-yellow is-outlined is-rounded is-medium">
               <span>See more on Dribbble</span>
             </a>
           </div>

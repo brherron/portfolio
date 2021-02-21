@@ -18,7 +18,7 @@ const HeroTitle = () => {
     let template = <div className="column is-hidden-mobile">
                       <div className="title">/</div>
                     </div>
-    if (i % 2 == 0 ) {
+    if (i % 2 === 0 ) {
       template = <div className="column">
                     <div className="title">{titleLetters}</div>
                   </div>

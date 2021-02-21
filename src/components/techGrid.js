@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StaticQuery, graphql } from "gatsby" 
 
 const Logo = styled.img`
   filter: grayscale(1);
