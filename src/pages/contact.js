@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'gatsby'
 
 import '../styles/styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -24,9 +25,9 @@ const ContactPage = () => {
       <nav className="navbar is-transparent is-planner animate-fadeDown">
         <div className="container">
           <div className="navbar-brand">
-            <a className="navbar-item" href="/">
+            <Link className="navbar-item" to="/">
               <img src={SiteLogo} alt="Beau Herron | Designer, Developer, and Musician" height="65" />
-            </a>
+            </Link>
           </div>
           <div className="navbar-menu" id="navMenu">
             <div className="navbar-end">
@@ -37,11 +38,11 @@ const ContactPage = () => {
                       <FontAwesomeIcon icon={faUndoAlt} />
                     </span>
                   </button>
-                  <a className="button is-medium tooltip is-tooltip-bottom" data-tooltip="Close" href="/">
+                  <Link className="button is-medium tooltip is-tooltip-bottom" data-tooltip="Close" to="/">
                     <span className="icon is-small">
                       <FontAwesomeIcon icon={faTimes} />
                     </span>
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

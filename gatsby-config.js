@@ -1,10 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `BHD.`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Beau Herron | Designer, Developer, & Musician`,
+    description: `Designer, Developer, & Musician.`,
+    author: `Beau Herron`,
+    siteUrl: `https://beauherrondev.com`,
+    keywords: `Developer`,
+    image: `/src/images/main-logo.svg`
   },
   plugins: [
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -45,7 +49,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-preload-fonts`
+    `gatsby-plugin-sass`
   ],
 }

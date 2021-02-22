@@ -3,6 +3,7 @@ import '../styles/styles.scss'
 import { graphql } from 'gatsby'
 
 //Import Components
+import SEO from '../components/seo'
 import Header from '../components/header'
 import Hero from '../components/hero'
 import About from '../components/about'
@@ -12,12 +13,15 @@ import Tech from '../components/tech'
 import CTA from '../components/callToAction'
 import Footer from '../components/footer'
 
+import SEOImage from '../../static/images/seo-image.jpg'
+
 const IndexPage = ({data}) => {
 
   let projects = data.allMarkdownRemark.edges
 
   return (
     <div className="animate-fadeDown">
+      <SEO image={SEOImage} />
       <Header />
       <Hero />
       <About />
