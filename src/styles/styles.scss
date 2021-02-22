@@ -515,7 +515,93 @@ footer .social-icons a.button {
 
 
 
+//CONTACT PAGE---------//
+.contact {
 
+  nav.is-planner {
+    border-bottom: 1px solid #E6ECF8;
+
+    button {
+      font-weight: 400;
+      color: black;
+      border-color: white;
+    }
+  }
+
+  .is-form-page .container {
+    padding: 0 20px;
+
+    .avatar {
+      width: 100px;
+      margin: -50px auto 50px;
+      z-index: 10;
+    }
+
+    h1.title {
+      font-family: 'proxima-nova';
+      font-weight: 400;
+      font-size: 1.4rem;
+      margin: 1rem 0;
+      letter-spacing: 1px;
+    }
+
+    form {
+      max-width: 640px;
+      margin: 32px auto 0;
+      
+      label {
+        font-weight: 500;
+        opacity: 0.8;
+        font-size: 1.1rem;
+      }
+
+      textarea {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 199px;
+      }
+    }
+  }
+
+  button {
+    margin: 2rem auto;
+  }
+}
+
+.is-form-page .container form input.is-large, .is-form-page .container form textarea.is-large, .is-form-page .container form select.is-large {
+  font-size: 1.2rem;
+}
+
+.is-form-page .container form button {
+  margin: 2rem 0 6rem;
+  border-width: 2px;
+  font-weight: 400;
+  height: auto;
+}
+
+
+
+
+//Animations
+.animate-fadeDown {
+  -webkit-animation: fadeIn 2s, translate-down 0.75s;
+  animation: fadeIn 2s, translate-down 0.75s;
+} 
+.animate-fadeUp {
+  -webkit-animation: fadeIn 2s, translate-up 1s;
+  animation: fadeIn 2s, translate-up 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+     opacity: 0;
+     transform: translateY(-20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+} 
 
 @include keyframes (on) {
   100% {
@@ -532,6 +618,8 @@ footer .social-icons a.button {
 }
 
 
+
+//Media Queries
 @media screen and (min-width: 319px) {
   .navbar-item img {
     height: 20px;
@@ -672,6 +760,10 @@ footer .social-icons a.button {
 
   footer .social-icons a.button.is-medium {
     font-size: 1.18rem;
+  }
+
+  .is-form-page .container form {
+    margin: 60px auto 0;
   }
 }
 

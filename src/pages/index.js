@@ -17,7 +17,7 @@ const IndexPage = ({data}) => {
   let projects = data.allMarkdownRemark.edges
 
   return (
-    <div>
+    <div className="animate-fadeDown">
       <Header />
       <Hero />
       <About />
