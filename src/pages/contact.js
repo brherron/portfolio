@@ -63,7 +63,7 @@ const ContactPage = () => {
         </section>
         <section className="is-white">
           <div className="container">
-            <form name="Contact Form" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <form name="Contact Form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
               <input type="hidden" name="form-name" value="Contact Form" />
               <div className="columns is-centered">
                 <div className="column is-half">
