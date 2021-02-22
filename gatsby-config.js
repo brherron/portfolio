@@ -45,9 +45,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-sass`,
-    'gatsby-plugin-transition-link',
-    'react-typical',
-    'react-burger-menu'
+    `gatsby-plugin-sass`
   ],
 }
