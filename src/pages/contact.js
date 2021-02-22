@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import SiteLogo from '../images/main-logo.svg'
 import { faUndoAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
 import Avatar from '../images/avatar.svg'
+import SEO from '../components/seo'
+import SEOImage from '../../static/images/seo-image.jpg'
 
 const ContactPage = () => {
   const [name, setName] = useState('')
@@ -22,6 +24,7 @@ const ContactPage = () => {
   
   return (
     <div className="contact">
+      <SEO title="Beau Herron | Contact" image={SEOImage} />
       <nav className="navbar is-transparent is-planner animate-fadeDown">
         <div className="container">
           <div className="navbar-brand">

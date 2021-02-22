@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Beau Herron | Designer, Developer, & Musician`,
+    title: "Beau Herron",
+    titleTemplate: "%s | Designer, Developer, & Musician",
     description: `Designer, Developer, & Musician.`,
     author: `Beau Herron`,
     siteUrl: `https://beauherrondev.com`,
     keywords: `Developer`,
-    image: `/src/images/main-logo.svg`
+    image: `/src/images/main-logo.svg`,
+    twitterUsername: "@beauherron_dev"
   },
   plugins: [
     `gatsby-plugin-preload-fonts`,
