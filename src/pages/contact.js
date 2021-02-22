@@ -26,11 +26,11 @@ const ContactPage = () => {
                       <FontAwesomeIcon icon={faUndoAlt} />
                     </span>
                   </button>
-                  <button className="button is-medium tooltip is-tooltip-bottom" data-tooltip="Close" href="/">
+                  <a className="button is-medium tooltip is-tooltip-bottom" data-tooltip="Close" href="/">
                     <span className="icon is-small">
                       <FontAwesomeIcon icon={faTimes} />
                     </span>
-                  </button>
+                  </a>
                 </p>
               </div>
             </div>

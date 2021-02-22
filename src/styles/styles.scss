@@ -521,7 +521,7 @@ footer .social-icons a.button {
   nav.is-planner {
     border-bottom: 1px solid #E6ECF8;
 
-    button {
+    .button {
       font-weight: 400;
       color: black;
       border-color: white;
@@ -561,10 +561,10 @@ footer .social-icons a.button {
         height: 199px;
       }
     }
-  }
 
-  button {
-    margin: 2rem auto;
+    button {
+      margin: 2rem auto;
+    }
   }
 }
 
