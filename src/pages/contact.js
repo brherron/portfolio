@@ -99,7 +99,6 @@ const ContactPage = () => {
               <div className="columns is-centered">
                 <div className="column is-one-third">
                   <div className="field">
-                    <div data-netlify-recaptcha="true"></div>
                     <div className="control">
                       <button className="button is-black is-outlined is-medium is-fullwidth is-rounded" type="submit">Submit</button>
                     </div>
