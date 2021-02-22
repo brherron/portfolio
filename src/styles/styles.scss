@@ -1,44 +1,6 @@
 //Fonts
 $font: 'proxima-nova', 'permanent-marker', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-//Animations
-@mixin animation($animate...) {
-  $max: length($animate);
-  $animations: '';
-  @for $i from 1 through $max {
-    $animations: #{$animations + nth($animate, $i)};
-    @if $i < $max {
-      $animations: #{$animations + ", "};
-    }
-  }
-  -webkit-animation: $animations;
-  -moz-animation: $animations;
-  -o-animation: $animations;
-  animation: $animations;
-}
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
-
-@mixin keyframes($animationName) {
-  @-webkit-keyframes #{$animationName} {
-    @content;
-  }
-  @-moz-keyframes #{$animationName} {
-    @content;
-  }
-  @-o-keyframes #{$animationName} {
-    @content;
-  }
-  @keyframes #{$animationName} {
-    @content;
-  }
-}
 
 //Colors
 
@@ -603,12 +565,8 @@ footer .social-icons a.button {
   }
 } 
 
-@include keyframes (on) {
-  100% {
-    opacity: 1;
-  }
-}
 
+//Under construction page.
 .construction {
   display: flex;
   justify-content: center;
