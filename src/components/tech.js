@@ -4,7 +4,7 @@ import TechGrid from './techGrid'
 const Tech = () => {
 
   return (
-    <div className="section tech is-medium is-white has-text-centered">
+    <div className="section tech is-medium is-white has-text-centered is-long">
       <div className="container is-narrow">
         <h1 className="title is-spaced is-size-3-desktop is-size-4-mobile">Tools and Technology.</h1>
         <div className="columns is-centered">

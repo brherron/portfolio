@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import '../styles/styles.scss' 
 import { graphql } from 'gatsby'
 
@@ -9,6 +9,8 @@ import About from '../components/about'
 import Skills from '../components/skills'
 import Projects from '../components/projects'
 import Tech from '../components/tech'
+import CTA from '../components/callToAction'
+import Footer from '../components/footer'
 
 const IndexPage = ({data}) => {
 
@@ -22,6 +24,8 @@ const IndexPage = ({data}) => {
       <Skills />
       <Projects projects={projects} />
       <Tech />
+      <CTA />
+      <Footer />
     </div>
   )
 }

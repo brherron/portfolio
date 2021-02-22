@@ -420,6 +420,7 @@ a, .button {
 
 //Tools/Tech Section
 .tech {
+
   .container.is-narrow {
     max-width: 1344px;
   }
@@ -439,6 +440,61 @@ a, .button {
   }
 }
 
+
+//Call to Action Section
+.section.CTA {
+  background-color: #000;
+
+  .box {
+    padding: 5rem 2rem;
+    margin-top: -12rem;
+    background-color: #F79ECB;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #F79ECB;
+
+    .title, .subtitle {
+      color: white;
+    }
+  }
+}
+
+.CTA .button.is-white.is-outlined.is-medium {
+  padding: 1.25em 3em;
+  font-weight: 600;
+  border-width: 2px;
+  margin-top: 2rem;
+
+  &:hover {
+    color: #F79ECB;
+  }
+}
+
+
+//Footer Section
+footer.section.is-small {
+  padding: 0rem 1.5rem 4rem;
+}
+
+.section.footer {
+  background-color: #000;
+
+  .title {
+    color: white;
+    font-family: 'proxima-nova';
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 3rem auto 2rem auto;
+    max-width: 400px;
+    opacity: 0.8;
+  }
+
+  .social-icons {
+    margin: 0 auto 3rem;
+
+    a.button.is-medium {
+      font-size: 1.05rem;
+    }
+  }
+}
 
 
 
@@ -580,6 +636,22 @@ a, .button {
     figure figcaption {
       padding: 0rem 1rem;
     }
+  }
+
+  footer.section.is-small {
+    padding: 1rem 1.5rem 4rem;
+  }
+
+  footer .title {
+    max-width: 300px;
+  }
+
+  footer .social-icons {
+    margin: 0 auto 3.5rem;
+  }
+
+  footer .social-icons a.button.is-medium {
+    font-size: 1.18rem;
   }
 }
 
