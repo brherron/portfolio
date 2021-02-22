@@ -492,10 +492,26 @@ footer.section.is-small {
 
     a.button.is-medium {
       font-size: 1.05rem;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: #000;
+        border: 2px solid white;
+      }
     }
   }
 }
 
+footer .social-icons a.button {
+  background-color: transparent;
+  color: white;
+  border-radius: 100%;
+  margin: 0 .2rem;
+  height: 47px;
+  width: 47px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
 
 
 
@@ -648,6 +664,10 @@ footer.section.is-small {
 
   footer .social-icons {
     margin: 0 auto 3.5rem;
+  }
+
+  footer .social-icons a.button {
+    margin: 0 0.8rem;
   }
 
   footer .social-icons a.button.is-medium {

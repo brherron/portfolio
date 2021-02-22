@@ -1,6 +1,9 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import Twitter from '../images/twitter-brands.svg'
+import { faTwitter, faDribbble, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faCopyright } from '@fortawesome/free-regular-svg-icons'
 
 
 const Footer = () => {
@@ -18,11 +21,24 @@ const Footer = () => {
         </div>
         <div className="social-icons">
           <p className="field">
-            <a href="https://twitter.com/beauherron_dev" target="_blank" rel="noreferrer" className="button is-medium is-outlined is-rounded is-white">
-              <img src={Twitter} alt=""/>
+            <a href="https://twitter.com/beauherron_dev" target="_blank" rel="noreferrer" className="button is-medium">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a href="https://dribbble.com/beauherron_dev" target="_blank" rel="noreferrer" className="button is-medium">
+              <FontAwesomeIcon icon={faDribbble} />
+            </a>
+            <a href="https://github.com/brherron" target="_blank" rel="noreferrer" className="button is-medium">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a href="mailto:hello@beauherrondev.com" target="_blank" rel="noreferrer" className="button is-medium">
+              <FontAwesomeIcon icon={faEnvelope} />
             </a>
           </p>
         </div>
+        <div className="copyright">
+          Made by Yours Truly <span className="icon has-white-text" syle="vertical-align:middle;"><FontAwesomeIcon icon={faCopyright} /></span> 2021
+        </div>
+        <div className="made-by-bulma"></div>
       </div>
     </footer>
   )
