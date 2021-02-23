@@ -10,6 +10,7 @@ module.exports = {
     twitterUsername: "@beauherron_dev"
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-preload-fonts`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
@@ -42,13 +43,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Beau Herron Portfolio`,
+        short_name: `beauherrondev`,
+        description: `Portfolio website for Beau Herron | Designer, Developer, & Musician`,
+        lang: `en`,
+        display: `standalone`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/site-icon.svg`,
+        icon: `src/images/site-icon.png`,
       },
     },
     `gatsby-plugin-sass`
