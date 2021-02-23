@@ -9,7 +9,7 @@ const ProjectCard = (props) => {
   return (
     <figure className="image is-3by2" onMouseOver={() => toggle(!state)} onMouseOut={() => toggle(!state)} onFocus={() => toggle(!state)} onBlur={() => toggle(!state)}>
       <img src={data.logo} alt="" className="project-logo" style={{ maxHeight: state ? '40%' : '20%', margin: state ? 'auto' : '1rem 1rem 0.2rem 1rem', width: state ? '100%' : 'auto'}}/>
-      <img src={data.image} alt="" className="project-thumb" style={{ transform: `scale(${ state ? 8 : 1.3 }) translateX(${state ? 50 : 0 }px)`, borderRadius: '12px' }}/>
+      <img src={data.image} alt="" className="project-thumb" style={{ transform: `scale(${ state ? 6 : 1 }) translateX(${state ? 50 : 0 }px)`, borderRadius: '12px' }}/>
       <figcaption style={{opacity: state ? '0' : '1'}}>
         <h3 className="subtitle">{data.project}</h3>
         <p>{data.subtitle}</p>
@@ -18,7 +18,7 @@ const ProjectCard = (props) => {
         </a>
       </figcaption>
       <div className="overlay"
-           style={{backgroundColor: state ? '#fedb6ae4' : '#000000d3'}}>
+           style={{backgroundColor: state ? '#fedb6ae4' : '#000000a3'}}>
       </div>
     </figure>
   )
