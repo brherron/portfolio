@@ -59,7 +59,7 @@ const ContactPage = () => {
               <div className="column is-three-quarters">
                 <img src={Avatar} alt="" className="avatar"/>
                 <h1 className="title is-spaced is-size-2-desktop is-size-3-tabled is-size-4-mobile">
-                  Thanks for taking the time to reach out. How can I help you today?
+                  Thanks for taking the time to reach out. Lets get to work!
                 </h1>
               </div>
             </div>
