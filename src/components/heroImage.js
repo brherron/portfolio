@@ -1,21 +1,17 @@
 import React from 'react'
-import HeroSVG from '../images/skull.svg'
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring'
+
+
+import BlackSkull from '../images/skull.svg'
+import BlueSkull from '../images/blue-skull.svg'
+import PinkSkull from '../images/pink-skull.svg'
+import YellowSkull from '../images/yellow-skull.svg'
 
 const ImageContainer = styled(animated.div)`
 `;
 
 const Skull = styled(animated.img)`
-`;
-const PinkSkull = styled(animated.img)`
-  filter: invert(42%) sepia(93%) saturate(1000%) hue-rotate(150deg) brightness(300%) contrast(20%);
-`;
-const BlueSkull = styled(animated.img)`
-  filter: invert(42%) sepia(93%) saturate(300%) hue-rotate(270deg) brightness(200%) contrast(50%);
-`;
-const YellowSkull = styled(animated.img)`
-  filter: invert(42%) sepia(93%) saturate(275%) hue-rotate(10deg) brightness(300%) contrast(36%);
 `;
 
 const calc = (x, y) => [-(y- 150 - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 30, 1]
@@ -31,10 +27,10 @@ const HeroImage = () => {
     <ImageContainer className="hero-image-container" 
       onMouseMove={({clientX: x, clientY: y}) => (set({xys: calc(x, y)}))}
       onMouseLeave={() => set({xys:[0,0,1]})}>
-        <Skull className="hero-image" src={HeroSVG} alt='Skull Hero' style ={{ transform: props.xys.interpolate(trans), zIndex: 5}}/>
-        <PinkSkull className="hero-image" src={HeroSVG} alt='Skull Hero' style ={{ transform: props.xys.interpolate(trans2), zIndex: 3}}/>
-        <BlueSkull className="hero-image" src={HeroSVG} alt='Skull Hero' style ={{ transform: props.xys.interpolate(trans3), zIndex: 2}}/>
-        <YellowSkull className="hero-image" src={HeroSVG} alt='Skull Hero' style ={{ transform: props.xys.interpolate(trans4), zIndex: 1}}/>
+        <Skull className="hero-image" src={BlackSkull} alt='Skull Hero' style ={{ transform: props.xys.interpolate(trans), zIndex: 5}}/>
+        <Skull className="hero-image" src={BlueSkull} alt='Skull Hero' style ={{ transform: props.xys.interpolate(trans2), zIndex: 3}}/>
+        <Skull className="hero-image" src={PinkSkull} alt='Skull Hero' style ={{ transform: props.xys.interpolate(trans3), zIndex: 2}}/>
+        <Skull className="hero-image" src={YellowSkull} alt='Skull Hero' style ={{ transform: props.xys.interpolate(trans4), zIndex: 1}}/>
     </ImageContainer>
   )
 }

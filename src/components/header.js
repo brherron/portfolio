@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 function Header() {
   
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar animate-fadeDown" role="navigation" aria-label="main navigation">
       <div className="container">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">

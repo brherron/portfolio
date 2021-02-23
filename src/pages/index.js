@@ -20,7 +20,7 @@ const IndexPage = ({data}) => {
   let projects = data.allMarkdownRemark.edges
 
   return (
-    <div className="animate-fadeDown">
+    <div>
       <SEO image={SEOImage} />
       <Header />
       <Hero />

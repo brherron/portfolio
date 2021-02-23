@@ -545,25 +545,49 @@ footer .social-icons a.button {
 
 
 //Animations
-.animate-fadeDown {
-  -webkit-animation: fadeIn 2s, translate-down 0.75s;
-  animation: fadeIn 2s, translate-down 0.75s;
-} 
 .animate-fadeUp {
   -webkit-animation: fadeIn 2s, translate-up 1s;
   animation: fadeIn 2s, translate-up 1s;
 }
 
+.animate-fadeDown {
+  -webkit-animation: fadeIn 2s, translate-down 0.75s;
+  animation: fadeIn 2s, translate-down 0.75s;
+}
+
 @keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes translate-down {
   0% {
-     opacity: 0;
-     transform: translateY(-20px);
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
   }
+
   100% {
-     opacity: 1;
-     transform: translateY(0);
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
   }
-} 
+}
+
+@keyframes translate-up {
+  0% {
+      -webkit-transform: translateY(40px);
+      transform: translateY(40px);
+  }
+
+  100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+}
 
 
 //Under construction page.

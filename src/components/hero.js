@@ -5,7 +5,7 @@ import HeroTitle from './heroTitle'
 const Hero = () => {
 
   return (
-    <div className="section hero is-white has-text-centered">
+    <div className="section hero is-white has-text-centered animate-fadeUp">
       <div className="hero-body">
         <div className="container">
           <div className="columns is-centered">
