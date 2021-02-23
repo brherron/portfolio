@@ -71,6 +71,10 @@ function SEO({ description, lang, meta, image: metaImage, title: pageTitle, path
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
           image: `og:image`,
           content: site.siteMetadata.image,
         },
