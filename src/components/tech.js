@@ -11,7 +11,7 @@ const Tech = () => {
           <div className="column is-three-fifths">
             <h2 className="subtitle is-size-5-desktop">
               Each project requires a different toolset, here are some that I am currently working with. 
-              There are always new trends that can be added to the arsenal.
+              There are always new trends with new tools that will be added to my arsenal.
             </h2>
           </div>
         </div>
