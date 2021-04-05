@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring'
 
@@ -21,7 +21,10 @@ const trans3 = (x, y, s) => `perspective(1750px) rotateX(${x}deg) rotateY(${y}de
 const trans4 = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s}) translateZ(${Math.abs(x*1)}px)`
 
 const HeroImage = () => {
-  const [props, set] = useSpring(() => ({xys: [0, 0, 1], config: {mass: 10, tension: 500, friction: 50} }))
+  const [props, set] = useSpring(() => ({xys: [-10, 10, 1.1], config: {mass: 10, tension: 500, friction: 15} }))
+
+  useEffect(() => void setTimeout(() => set({xys: [-5, 10, 1]}), 1), [])
+  useEffect(() => void setTimeout(() => set({xys: [-5, 10, 1], config: {mass: 10, tension: 500, friction: 50} }), 3000), [])
 
   return (
     <ImageContainer className="hero-image-container" 
